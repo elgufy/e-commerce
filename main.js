@@ -120,6 +120,29 @@ function mostrarMensaje(mensaje) {
         position: 'right'
     }).showToast();
 }
+function mostrarMensaje2(mensaje) {
+
+  Toastify({
+      text: mensaje,
+      duration: 3000,
+      gravity: 'top',
+      position: 'right',
+      style: {
+        background: 'red'
+    }
+
+  }).showToast();
+}
+function vaciarcarrito() {
+  const botonvaciarcarrito = document.getElementById('vaciarcarrito');
+  botonvaciarcarrito.addEventListener('click', () => {
+    carrito.length = 0;
+    mostrarMensaje2('Se vacio el carrito')
+    actualizarCarrito();
+  });
+ 
+}
+vaciarcarrito();
 
 function actualizarCarrito() {
   const cartItems = document.getElementById('cart-items');
