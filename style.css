@@ -8,6 +8,8 @@ body {
     background-color: #45a049;
     margin: 0;
     height: 60px;
+    top: -21px;
+    position:relative;
   }
   
   .container {
